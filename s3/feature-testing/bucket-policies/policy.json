@@ -1,0 +1,20 @@
+{
+   "Statement": [
+      {
+         "Effect": "Allow",
+         "Principal": {
+            "AWS": "arn:aws:iam::703697786116:user/EtherealAltIAM"
+         },
+         "Action": [
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+         ],
+         "Resource": [
+            "arn:aws:s3:::ethereal-bucket-policy-1234",
+            "arn:aws:s3:::ethereal-bucket-policy-1234/*"
+         
+         ]
+      }
+   ]
+}

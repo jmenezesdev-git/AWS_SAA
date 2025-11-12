@@ -1,0 +1,16 @@
+{
+    "Grants": [
+        {
+            "Grantee": {
+                "DisplayName": "EtherealAlt",
+                "ID": "ai23not232a42real535id...",
+                "Type": "CanonicalUser"
+            },
+            "Permission": "FULL_CONTROL"
+        }
+    ],
+    "Owner": {
+        "DisplayName": "EtherealDev",
+        "ID": "49dea..."
+    }
+}
