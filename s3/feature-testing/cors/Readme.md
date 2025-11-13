@@ -35,7 +35,7 @@ aws s3 cp index.html s3://ethereal-cors-testing
 # Create API gateway with mock response then test the endpoint
 # https://afbdrspui9.execute-api.ca-central-1.amazonaws.com/prod
 # 
-# Mock response example stored in hello.js
+# Mock response example stored in hello.json
 ```sh
 curl -X POST -H "Content-Type: application/json" https://afbdrspui9.execute-api.ca-central-1.amazonaws.com/prod/hello
 ```
