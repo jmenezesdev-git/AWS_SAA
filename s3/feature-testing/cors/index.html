@@ -92,5 +92,20 @@
     <footer>
         <p>Maintained by the <span class="shrine">Hakurei Shrine Network</span> | © 2025 Gensokyo Communications Bureau</p>
     </footer>
+    <script type="text/javascript">
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://afbdrspui9.execute-api.ca-central-1.amazonaws.com/prod/hello", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                const results = JSON.parse(xhr.responseText);
+                console.log('results', results);
+                //Thanks Mozilla for the great tutorials on XMLHttpRequest/send
+            }
+        };
+        xhr.send();
+
+
+    </script>
 </body>
 </html>
