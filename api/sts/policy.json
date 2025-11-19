@@ -1,0 +1,11 @@
+{
+  "Version":"2012-10-17",		 	 	 
+  "Statement": [
+    {
+      "Sid": "FirstStatement",
+      "Effect": "Allow",
+      "Action": ["sts:AssumeRole"],
+      "Resource": "arn:aws:iam::169634835787:role/ethereal-sts-stack-StsRole-dyZA1LsQfLbl"
+    }
+  ]
+}
