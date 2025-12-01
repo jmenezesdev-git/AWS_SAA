@@ -47,7 +47,6 @@ aws iam create-role --role-name eth-SSMAutomationRole --assume-role-policy-docum
 
 
 aws iam attach-role-policy --role-name eth-SSMAutomationRole --policy-arn arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-<!-- aws iam attach-role-policy --role-name eth-SSMAutomationRole --policy-arn arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole -->
 
 aws iam create-instance-profile --instance-profile-name eth-SSMAutomationInstanceProfile
 
@@ -94,3 +93,14 @@ aws ec2 delete-egress-only-internet-gateway --egress-only-internet-gateway-id ei
 aws ec2 delete-subnet --subnet-id subnet-037b4dd214f2475e1
 
 aws ec2 delete-vpc --vpc-id vpc-0ecc2de5d60ceeade
+
+
+
+
+aws iam remove-role-from-instance-profile --role-name eth-SSMAutomationRole --instance-profile-name eth-SSMAutomationInstanceProfile
+aws iam delete-instance-profile --instance-profile-name eth-SSMAutomationInstanceProfile
+aws iam detach-role-policy --role-name eth-SSMAutomationRole --policy-arn arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+aws iam delete-role --role-name eth-SSMAutomationRole
+
+
+
