@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+aws iam create-role --role-name eth-SSMManagedInstanceCoreRole --assume-role-policy-document file://ssm-trust-policy.json
+
+aws iam attach-role-policy --role-name eth-SSMManagedInstanceCoreRole --policy-arn arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+
+aws iam create-instance-profile --instance-profile-name eth-SSMManagedInstanceCoreProfile
+
+aws iam add-role-to-instance-profile --role-name eth-SSMManagedInstanceCoreRole --instance-profile-name eth-SSMManagedInstanceCoreProfile
