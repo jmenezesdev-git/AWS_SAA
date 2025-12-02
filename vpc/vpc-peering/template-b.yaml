@@ -1,0 +1,52 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: EC2 instance creation for use with testing vpc peering
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t2.micro
+  ImageId:
+    Type: "AWS::EC2::Image::Id"
+    Default: ami-0aa45210d67f939f2
+  SubnetId:
+    Type: "AWS::EC2::Subnet::Id"
+    Default: subnet-03d18f8a3d6e9db3d
+  VPCId:
+    Type: "AWS::EC2::VPC::Id"
+    Default: vpc-00ca5316972426917
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId:  !Ref ImageId
+      #IamInstanceProfile: !Ref Ec2InstanceProfile
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          yum update -y
+          yum install -y httpd
+          systemctl start httpd
+          systemctl enable httpd
+          echo "<html><body><h1>Hello from Apache on Amazon Linux 2!</h1></body></html>" > /var/www/html/index.html
+      NetworkInterfaces:
+        - DeviceIndex: 0
+          SubnetId: !Ref SubnetId
+          AssociatePublicIpAddress: true
+          GroupSet:
+            - !GetAtt SG.GroupId
+          DeleteOnTermination: true     
+  SG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow http to client host
+      VpcId: !Ref VPCId
+      SecurityGroupIngress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0

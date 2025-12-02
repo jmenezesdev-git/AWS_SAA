@@ -1,0 +1,63 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: EC2 instance creation for use with testing vpc peering
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t2.micro
+  ImageId:
+    Type: "AWS::EC2::Image::Id"
+    Default: ami-0aa45210d67f939f2
+  SubnetId:
+    Type: "AWS::EC2::Subnet::Id"
+    Default: subnet-0b6628da21e2f84d4
+  VPCId:
+    Type: "AWS::EC2::VPC::Id"
+    Default: vpc-069ce4bd91161cc6b
+Resources:
+  IamRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+  Ec2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref IamRole
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId:  !Ref ImageId
+      IamInstanceProfile: !Ref Ec2InstanceProfile
+      NetworkInterfaces:
+        - DeviceIndex: 0
+          SubnetId: !Ref SubnetId
+          AssociatePublicIpAddress: true
+          GroupSet:
+            - !GetAtt SG.GroupId
+          DeleteOnTermination: true     
+  SG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow http to client host
+      VpcId: !Ref VPCId
+      SecurityGroupIngress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
