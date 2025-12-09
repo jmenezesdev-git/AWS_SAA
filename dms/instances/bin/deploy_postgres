@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+echo "== deploy rds"
+
+STACK_NAME="rds-dms-postgres"
+
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudformation/deploy/index.html
+aws cloudformation deploy \
+--template-file cfn/postgres.yaml \
+--capabilities CAPABILITY_NAMED_IAM \
+--no-execute-changeset \
+--parameter-overrides VpcId="vpc-00253ca8e15bba403" Subnets="subnet-033a5824a8ed3456e,subnet-05e283d35eec28a6f,subnet-0f3d908b1b626ecaa" \
+--region ca-central-1 \
+--stack-name $STACK_NAME
+
+# aws cloudformation describe-change-set \
+# --change-set-name arn:aws:cloudformation:ca-central-1:169634835787:changeSet/awscli-cloudformation-package-deploy-1765299104/f356e4f8-ae49-433e-9748-b65bd629ede6
+
+#this takes forever so...
+
+# aws cloudformation execute-change-set \
+#   --stack-name $STACK_NAME \
+#   --change-set-name arn:aws:cloudformation:ca-central-1:169634835787:changeSet/awscli-cloudformation-package-deploy-1765308416/89c7843b-193e-47b9-a13e-ac34fe36f0a9
+
+
+aws cloudformation describe-stacks --stack-name rds-dms-postgres

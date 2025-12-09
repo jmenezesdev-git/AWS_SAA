@@ -1,0 +1,1 @@
+Getting CHATGPT to produce sample data.

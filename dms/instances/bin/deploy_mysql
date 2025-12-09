@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo "== deploy rds"
+
+STACK_NAME="rds-dms-mysql"
+
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudformation/deploy/index.html
+aws cloudformation deploy \
+--template-file cfn/mysql.yaml \
+--capabilities CAPABILITY_NAMED_IAM \
+--no-execute-changeset \
+--parameter-overrides VpcId="vpc-00253ca8e15bba403" Subnets="subnet-033a5824a8ed3456e,subnet-05e283d35eec28a6f,subnet-0f3d908b1b626ecaa" \
+--region ca-central-1 \
+--stack-name $STACK_NAME
+
+# aws cloudformation describe-change-set \
+# --change-set-name arn:aws:cloudformation:ca-central-1:169634835787:changeSet/awscli-cloudformation-package-deploy-1765298960/5fbc5473-cc89-4775-88cc-aa3133fc5c41
+
+# aws cloudformation execute-change-set \
+#   --stack-name $STACK_NAME \
+#   --change-set-name arn:aws:cloudformation:ca-central-1:169634835787:changeSet/awscli-cloudformation-package-deploy-1765298960/5fbc5473-cc89-4775-88cc-aa3133fc5c41
