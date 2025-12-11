@@ -89,3 +89,10 @@ aws batch submit-job \
     ] -->
 
 # also tweaked Security group to allow HTTPS output traffic. Should probably create a new VPC for this next time.
+
+aws ecr delete-repository \
+    --repository-name square \
+    --force
+
+docker rmi 169634835787.dkr.ecr.ca-central-1.amazonaws.com/square:latest
+docker rmi square:latest
