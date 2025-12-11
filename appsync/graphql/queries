@@ -1,0 +1,18 @@
+export const listEthAppsyncs = `
+    query ListEthAppsyncs(
+        $filter: TableEthAppsyncFilterInput
+        $limit: Int
+        $nextToken: String
+) {
+    listEthAppsyncs(filter: $filter, limit: $limit, nextToken: $nextToken){   
+        items {
+            pk
+            fruit
+            level
+            __typename
+        }
+        nextToken
+        __typename
+    }
+  }
+`;
