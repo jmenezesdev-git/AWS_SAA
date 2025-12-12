@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+echo "== send message"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+message_attributes_path="file://$(cygpath -w "$script_dir/../send-message.json")"
+
+QUEUE_URL="https://sqs.ca-central-1.amazonaws.com/169634835787/eth-sqs-standard-EthQueue-1iouLbvl1f5b"
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello Gensokyo!" \
+--delay-seconds 1 \
+--message-attributes "$message_attributes_path"
+#echo "$message_attributes_path"
+#cat "$root_path/send-message.json"

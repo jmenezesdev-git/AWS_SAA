@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+echo "== receive message"
+
+QUEUE_URL="https://sqs.ca-central-1.amazonaws.com/169634835787/eth-sqs-standard-EthQueue-1iouLbvl1f5b"
+
+RESULT=$(aws sqs receive-message \
+--queue-url $QUEUE_URL \
+--attribute-names All \
+--message-attribute-names All \
+--max-number-of-messages 10)
+
+RECEIPT_HANDLE=$(echo $RESULT | jq -r '.Messages[0].ReceiptHandle')
+echo "Deleting Receipt: $RECEIPT_HANDLE"
+
+aws sqs delete-message --queue-url $QUEUE_URL --receipt-handle $RECEIPT_HANDLE
