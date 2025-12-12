@@ -1,3 +1,5 @@
+# Make src and dest vid
+
 aws s3 mb s3://eth-src-vid-123434
 
 aws s3 mb s3://eth-dest-vid-123434
