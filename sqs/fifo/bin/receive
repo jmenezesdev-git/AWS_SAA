@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+echo "== receive message"
+
+QUEUE_URL="https://sqs.ca-central-1.amazonaws.com/169634835787/eth-sqs-fifo-EthQueue-zKEzSAK91HJY.fifo"
+
+aws sqs receive-message \
+--queue-url $QUEUE_URL \
+--attribute-names All \
+--message-attribute-names All \
+--max-number-of-messages 10

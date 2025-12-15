@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+echo "== send message"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+message_attributes_path="file://$(cygpath -w "$script_dir/../send-message.json")"
+
+QUEUE_URL="https://sqs.ca-central-1.amazonaws.com/169634835787/eth-sqs-fifo-EthQueue-zKEzSAK91HJY.fifo"
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello Gensokyo!" \
+--message-attributes "$message_attributes_path" \
+--message-deduplication-id "HelloGensokyo" \
+--message-group-id "send_sh"
+#echo "$message_attributes_path"
+#cat "$root_path/send-message.json"
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello Reimu!" \
+--message-attributes "$message_attributes_path" \
+--message-deduplication-id "HelloReimu" \
+--message-group-id "send_sh"
+
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello Cirno!" \
+--message-attributes "$message_attributes_path" \
+--message-deduplication-id "HelloCirno" \
+--message-group-id "send_sh"
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello my favorite Komainu!" \
+--message-attributes "$message_attributes_path" \
+--message-deduplication-id "HellomyfavoriteKomainu" \
+--message-group-id "send_sh"

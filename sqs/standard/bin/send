@@ -13,3 +13,22 @@ aws sqs send-message \
 --message-attributes "$message_attributes_path"
 #echo "$message_attributes_path"
 #cat "$root_path/send-message.json"
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello Reimu!" \
+--delay-seconds 2 \
+--message-attributes "$message_attributes_path"
+
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello Cirno!" \
+--delay-seconds 3 \
+--message-attributes "$message_attributes_path"
+
+aws sqs send-message \
+--queue-url $QUEUE_URL \
+--message-body "Hello my favorite Komainu!" \
+--delay-seconds 4 \
+--message-attributes "$message_attributes_path"

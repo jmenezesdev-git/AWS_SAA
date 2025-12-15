@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+echo "== deploy SQS fifo queue via CFN"
+root_path=$(realpath .)
+template_path="${root_path}/template.yaml"
+
+echo $template_path
+
+STACK_NAME="eth-sqs-fifo"
+aws cloudformation deploy \
+--template-file template.yaml \
+--no-execute-changeset \
+--region ca-central-1 \
+--stack-name $STACK_NAME
