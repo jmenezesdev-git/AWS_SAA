@@ -1,0 +1,9 @@
+version=0.1
+[default.package.parameters]
+s3_bucket = "eth-lambda-temp"
+region = "ca-central-1"
+image_repository = "169634835787.dkr.ecr.ca-central-1.amazonaws.com/eth-python-container"
+[default.deploy.parameters]
+s3_bucket = "eth-lambda-temp"
+region = "ca-central-1"
+image_repository = "169634835787.dkr.ecr.ca-central-1.amazonaws.com/eth-python-container"

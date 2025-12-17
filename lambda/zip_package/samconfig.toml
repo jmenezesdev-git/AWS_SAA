@@ -1,0 +1,7 @@
+version=0.1
+[default.package.parameters]
+s3_bucket = "eth-lambda-temp"
+region = "ca-central-1"
+[default.deploy.parameters]
+s3_bucket = "eth-lambda-temp"
+region = "ca-central-1"
