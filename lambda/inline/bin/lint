@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+
+root_path=$(realpath .)
+
+# cfn-lint
+echo "__CFN linting...."
+cfn-lint "${root_path}/template.yaml"
