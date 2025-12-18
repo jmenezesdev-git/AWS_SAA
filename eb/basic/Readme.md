@@ -63,3 +63,6 @@ Thing.all
 # Sent me to this github repo:
 # https://github.com/aws/aws-elastic-beanstalk-cli-setup
 # needed powershell/cmd to install. bit finnicky
+
+# package for EB 
+# zip the contents, not the directory, upload to Elastic Beanstalk
