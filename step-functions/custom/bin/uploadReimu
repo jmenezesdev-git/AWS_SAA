@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+aws s3 rm s3://eth-gensokyo/inputs/Th20Reimu.png
+aws s3 cp TH20Reimu.png s3://eth-gensokyo/inputs/Th20Reimu.png
