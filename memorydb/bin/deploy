@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+echo "== deploy EC2 instance to interact with redis via cfn"
+root_path=$(realpath .)
+template_path="${root_path}/template.yaml"
+
+echo $template_path
+
+STACK_NAME="eth-memorydb-redis"
+aws cloudformation deploy \
+--template-file template.yaml \
+--capabilities CAPABILITY_NAMED_IAM \
+--no-execute-changeset \
+--region ca-central-1 \
+--stack-name $STACK_NAME
