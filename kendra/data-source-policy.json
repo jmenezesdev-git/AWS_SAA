@@ -1,0 +1,33 @@
+{
+    "Version":"2012-10-17",		 	 	 
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::eth-kendra-bucket/*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::eth-kendra-bucket"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kendra:BatchPutDocument",
+                "kendra:BatchDeleteDocument"
+            ],
+            "Resource": [
+                "arn:aws:kendra:us-east-1:169634835787:index/b52362dc-1ed9-4495-940e-0fec5d478543"
+            ]
+        }
+    ]
+}
