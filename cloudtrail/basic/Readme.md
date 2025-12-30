@@ -16,6 +16,8 @@ aws cloudtrail create-trail \
 --s3-bucket-name eth-cloudtrail
 --region ca-central-1
 ```
+
+# have to start logging with a separate command
 ```sh
 aws cloudtrail start-logging --name ethereal-trail
 ```
