@@ -1,0 +1,101 @@
+ITEM_ID,CATEGORY_L1,PRICE,BRAND,AVAILABLE,CREATION_TIMESTAMP
+i1001,Electronics,199.99,Sony,true,1698000000
+i1002,Electronics,89.99,Anker,true,1698000100
+i1003,Beauty,24.99,Maybelline,true,1698000200
+i1004,Beauty,49.99,Olay,true,1698000300
+i1005,Home,129.99,IKEA,true,1698000400
+i1006,Home,59.99,HomeBasics,true,1698000500
+i1007,Books,14.99,Penguin,true,1698000600
+i1008,Books,22.99,HarperCollins,true,1698000700
+i1009,Tools,79.99,DeWalt,true,1698000800
+i1010,Tools,149.99,Bosch,true,1698000900
+i1011,Kitchen,39.99,Cuisinart,true,1698001000
+i1012,Kitchen,89.99,KitchenAid,true,1698001100
+i1013,Video Games,59.99,Nintendo,true,1698001200
+i1014,Video Games,69.99,Sony,true,1698001300
+i1015,Fashion,34.99,Nike,true,1698001400
+i1016,Fashion,49.99,Adidas,true,1698001500
+i1017,Electronics,299.99,Samsung,true,1698001600
+i1018,Electronics,19.99,Belkin,true,1698001700
+i1019,Grocery,12.99,Kelloggs,true,1698001800
+i1020,Grocery,6.99,Quaker,true,1698001900
+i1021,Sports,29.99,Wilson,true,1698002000
+i1022,Sports,199.99,FitnessPro,true,1698002100
+i1023,Beauty,18.99,Neutrogena,true,1698002200
+i1024,Beauty,29.99,Loreal,true,1698002300
+i1025,Health,24.99,Centrum,true,1698002400
+i1026,Health,59.99,Fitbit,true,1698002500
+i1027,Books,9.99,Scholastic,true,1698002600
+i1028,Books,19.99,Oxford,true,1698002700
+i1029,Electronics,499.99,Apple,true,1698002800
+i1030,Electronics,39.99,Logitech,true,1698002900
+i1031,Home,249.99,Wayfair,true,1698003000
+i1032,Home,89.99,HomeBasics,true,1698003100
+i1033,Automotive,129.99,Bosch,true,1698003200
+i1034,Automotive,59.99,ArmorAll,true,1698003300
+i1035,Fashion,19.99,Hanes,true,1698003400
+i1036,Fashion,79.99,Levis,true,1698003500
+i1037,Kitchen,24.99,OXO,true,1698003600
+i1038,Kitchen,119.99,Ninja,true,1698003700
+i1039,Garden,49.99,Scotts,true,1698003800
+i1040,Garden,199.99,Greenworks,true,1698003900
+i1041,Video Games,39.99,EA,true,1698004000
+i1042,Video Games,59.99,Ubisoft,true,1698004100
+i1043,Home,99.99,Philips,true,1698004200
+i1044,Home,149.99,GE,true,1698004300
+i1045,Office,12.99,Staples,true,1698004400
+i1046,Office,199.99,HP,true,1698004500
+i1047,Beauty,15.99,Cetaphil,true,1698004600
+i1048,Beauty,45.99,EsteeLauder,true,1698004700
+i1049,Books,29.99,OReilly,true,1698004800
+i1050,Books,17.99,RandomHouse,true,1698004900
+i1051,Pet Supplies,14.99,Purina,true,1698005000
+i1052,Pet Supplies,39.99,Kong,true,1698005100
+i1053,Tools,99.99,Black+Decker,true,1698005200
+i1054,Tools,179.99,Makita,true,1698005300
+i1055,Fashion,59.99,Puma,true,1698005400
+i1056,Fashion,24.99,Uniqlo,true,1698005500
+i1057,Electronics,149.99,JBL,true,1698005600
+i1058,Electronics,79.99,TP-Link,true,1698005700
+i1059,Health,34.99,NatureMade,true,1698005800
+i1060,Health,99.99,Withings,true,1698005900
+i1061,Sports,49.99,UnderArmour,true,1698006000
+i1062,Sports,89.99,Fitbit,true,1698006100
+i1063,Kitchen,69.99,Tefal,true,1698006200
+i1064,Kitchen,159.99,InstantPot,true,1698006300
+i1065,Automotive,39.99,Michelin,true,1698006400
+i1066,Automotive,249.99,Garmin,true,1698006500
+i1067,Beauty,21.99,Revlon,true,1698006600
+i1068,Beauty,54.99,Clinique,true,1698006700
+i1069,Books,11.99,Dover,true,1698006800
+i1070,Books,27.99,Springer,true,1698006900
+i1071,Home,179.99,Shark,true,1698007000
+i1072,Home,299.99,Dyson,true,1698007100
+i1073,Office,29.99,3M,true,1698007200
+i1074,Office,149.99,Brother,true,1698007300
+i1075,Fashion,99.99,CalvinKlein,true,1698007400
+i1076,Fashion,39.99,Zara,true,1698007500
+i1077,Grocery,4.99,Nestle,true,1698007600
+i1078,Grocery,8.99,Barilla,true,1698007700
+i1079,Garden,89.99,Fiskars,true,1698007800
+i1080,Garden,249.99,Husqvarna,true,1698007900
+i1081,Electronics,999.99,Apple,true,1698008000
+i1082,Electronics,129.99,Ring,true,1698008100
+i1083,Kitchen,44.99,Pyrex,true,1698008200
+i1084,Kitchen,199.99,Breville,true,1698008300
+i1085,Mobile Accessories,19.99,Spigen,true,1698008400
+i1086,Mobile Accessories,29.99,OtterBox,true,1698008500
+i1087,Beauty,13.99,Eucerin,true,1698008600
+i1088,Beauty,62.99,MAC,true,1698008700
+i1089,Books,34.99,Cambridge,true,1698008800
+i1090,Books,24.99,NoStarch,true,1698008900
+i1091,Pet Supplies,9.99,Arm&Hammer,true,1698009000
+i1092,Pet Supplies,69.99,PetSafe,true,1698009100
+i1093,Tools,59.99,Stanley,true,1698009200
+i1094,Tools,129.99,Ryobi,true,1698009300
+i1095,Video Games,49.99,Capcom,true,1698009400
+i1096,Video Games,69.99,Bethesda,true,1698009500
+i1097,Health,19.99,Advil,true,1698009600
+i1098,Health,79.99,Omron,true,1698009700
+i1099,Fashion,149.99,NorthFace,true,1698009800
+i1100,Fashion,59.99,Gap,true,1698009900

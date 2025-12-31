@@ -1,0 +1,101 @@
+USER_ID,AGE,GENDER,COUNTRY,ACCOUNT_AGE_DAYS,PRIME_MEMBER,PREFERRED_CATEGORY
+u0001,34,M,US,1240,true,Electronics
+u0002,28,F,US,860,false,Beauty
+u0003,45,M,CA,2300,true,Home
+u0004,19,F,US,120,false,Books
+u0005,52,M,UK,3100,true,Tools
+u0006,41,F,DE,1900,true,Kitchen
+u0007,23,M,US,340,false,Video Games
+u0008,36,F,FR,1500,true,Fashion
+u0009,29,M,IN,980,false,Electronics
+u0010,47,F,US,2700,true,Grocery
+u0011,33,M,AU,1100,false,Sports
+u0012,26,F,US,410,true,Beauty
+u0013,58,M,US,4200,true,Health
+u0014,21,F,CA,210,false,Books
+u0015,39,M,US,1600,true,Electronics
+u0016,44,F,UK,2000,true,Home
+u0017,31,M,DE,900,false,Automotive
+u0018,27,F,US,520,false,Fashion
+u0019,35,M,FR,1400,true,Kitchen
+u0020,50,F,US,3600,true,Garden
+u0021,24,M,US,300,false,Video Games
+u0022,42,F,CA,1800,true,Home
+u0023,37,M,US,1550,true,Office
+u0024,29,F,IN,700,false,Beauty
+u0025,61,M,UK,4800,true,Books
+u0026,34,F,US,1200,false,Pet Supplies
+u0027,46,M,DE,2500,true,Tools
+u0028,22,F,US,190,false,Fashion
+u0029,40,M,AU,1700,true,Electronics
+u0030,55,F,US,3900,true,Health
+u0031,27,M,CA,640,false,Sports
+u0032,38,F,US,1450,true,Kitchen
+u0033,48,M,FR,2900,true,Automotive
+u0034,32,F,UK,980,false,Beauty
+u0035,20,M,US,150,false,Books
+u0036,43,F,DE,2100,true,Home
+u0037,36,M,US,1300,true,Office
+u0038,25,F,CA,420,false,Fashion
+u0039,54,M,US,4100,true,Grocery
+u0040,41,F,AU,1850,true,Garden
+u0041,30,M,US,820,false,Electronics
+u0042,47,F,UK,2600,true,Kitchen
+u0043,35,M,IN,1100,false,Mobile Accessories
+u0044,28,F,US,560,true,Beauty
+u0045,62,M,CA,5200,true,Books
+u0046,39,F,US,1680,false,Pet Supplies
+u0047,44,M,DE,2300,true,Tools
+u0048,23,F,US,260,false,Video Games
+u0049,51,M,FR,3700,true,Health
+u0050,34,F,US,1250,true,Fashion
+u0051,29,M,US,740,false,Electronics
+u0052,46,F,CA,2100,true,Home
+u0053,57,M,UK,4500,true,Garden
+u0054,31,F,DE,880,false,Beauty
+u0055,22,M,US,210,false,Books
+u0056,48,F,FR,3200,true,Kitchen
+u0057,35,M,US,1400,true,Office
+u0058,26,F,AU,510,false,Fashion
+u0059,60,M,US,5000,true,Health
+u0060,42,F,UK,1950,true,Grocery
+u0061,33,M,IN,900,false,Electronics
+u0062,24,F,US,330,false,Video Games
+u0063,55,M,CA,3900,true,Tools
+u0064,38,F,US,1500,true,Pet Supplies
+u0065,47,M,DE,2700,true,Automotive
+u0066,21,F,US,180,false,Books
+u0067,59,M,FR,4600,true,Home
+u0068,36,F,US,1320,true,Fashion
+u0069,28,M,AU,670,false,Sports
+u0070,44,F,UK,2250,true,Kitchen
+u0071,34,M,US,1180,true,Electronics
+u0072,52,F,CA,3400,true,Health
+u0073,23,M,US,290,false,Video Games
+u0074,41,F,DE,2050,true,Garden
+u0075,63,M,US,5400,true,Books
+u0076,37,F,FR,1600,true,Beauty
+u0077,30,M,US,800,false,Office
+u0078,49,F,UK,3100,true,Home
+u0079,26,M,IN,480,false,Fashion
+u0080,58,F,US,4300,true,Grocery
+u0081,35,M,CA,1450,true,Electronics
+u0082,27,F,US,560,false,Beauty
+u0083,46,M,DE,2600,true,Tools
+u0084,22,F,US,200,false,Books
+u0085,54,M,FR,3800,true,Health
+u0086,39,F,AU,1700,true,Kitchen
+u0087,31,M,US,920,false,Automotive
+u0088,48,F,UK,2900,true,Home
+u0089,25,M,US,360,false,Video Games
+u0090,60,F,CA,5100,true,Garden
+u0091,34,M,US,1260,true,Electronics
+u0092,43,F,DE,2200,true,Pet Supplies
+u0093,56,M,FR,4000,true,Books
+u0094,28,F,US,610,false,Fashion
+u0095,47,M,UK,2750,true,Tools
+u0096,21,F,US,170,false,Books
+u0097,52,M,AU,3600,true,Health
+u0098,38,F,US,1480,true,Beauty
+u0099,29,M,CA,710,false,Sports
+u0100,45,F,US,2400,true,Home
